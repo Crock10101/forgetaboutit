@@ -92,21 +92,7 @@ const NavLinkImg = styled(Link)`
   border-radius: 20px;
   border-width: 5px;
 `
-const Bars = styled(FaBars)`
-display: none;
-color: black;
-align-items:center;
- @media screen and (max-width: 768px){
-   display: block;
-   position: absolute;
-    top: -10px;
-    right: 0;
-    transform: translate(-100%, 75%);
-    font-size: 1.8rem;
-    cursor: pointer;
-    
- }
- `
+
 
  const NavMenu = styled.div`
  display: flex;
