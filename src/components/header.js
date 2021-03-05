@@ -23,7 +23,7 @@ const Header = () => {
     <Nav>
       <GlobalStyle/>
       <NavLinkImg to ="/"><LImg fluid={data.Logo.childImageSharp.fluid} /></NavLinkImg>
-      <Bars />
+      
       <NavMenu>
       <NavLink to='/About' >
             About
