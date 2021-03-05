@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import React from "react"
 import styled from 'styled-components'
-import {FaBars} from 'react-icons'
+import {FaBars} from 'react-icons/Fa'
 import { Button } from "./styles/Button"
 import { GlobalStyle } from "./styles/GlobalStyles"
 import { useStaticQuery, graphql } from "gatsby"
