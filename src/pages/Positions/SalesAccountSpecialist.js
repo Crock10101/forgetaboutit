@@ -10,7 +10,7 @@ import Footer from "../Footer.js"
 const AccountCord = () => {
   const data = useStaticQuery(graphql`
     query sales {
-      bg: file(relativePath: { eq: "comb.png" }) {
+      bg: file(relativePath: { eq: "AccountSpecialist.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 3080, quality: 100) {
             ...GatsbyImageSharpFluid_noBase64
@@ -35,25 +35,14 @@ const AccountCord = () => {
         <HImg fluid={data.bg.childImageSharp.fluid} alt="Logo" />
         <JobWrapper>
           <DetailsContainer>
-            <h1>Account Coordinator</h1>
+            <h1>Sales Account Specialist</h1>
 
             <br></br>
             <div>
               <h5>The position:</h5>
               <br></br>
               <p>
-                Under the direct supervision of the Account Specialist, the
-                Account Coordinator focuses on coordinating all day-to-day tasks
-                involving customer and carrier relationships. This role is
-                specifically built as a training role, and once completed, you
-                will grow into a Sales Account Specialist. As an Account
-                Coordinator, you will be facilitating daily communication
-                between carrier and customers, analyzing and negotiating price
-                based on market trends, and screening carriers to find reliable
-                and quality drivers. You will play a critical role in executing
-                business for our customers by building relationships and
-                partnering with Account Specialist’s to ensure customers’ needs
-                are met.
+              BBI is looking for motivated individuals to join our rapidly growing team. As a Sales Account Specialist, you will focus on the fast-paced brokerage aspect of our business, prospecting, closing, and helping customers move inventory in the most cost-effective way by identifying and providing logistics solutions. You will create and manage your individual portfolio of accounts through constant communication with carriers and customers. There is an unlimited amount of growth in this role as you build your book of business. 
               </p>
             </div>
             <div>
@@ -62,34 +51,28 @@ const AccountCord = () => {
               <br></br>
               <span>
                 {" "}
-                • Manage Account Specialist’s portfolio of accounts through
-                constant communication with customers and carriers.
+                •	Prospect potential customers, build, maintain, and manage account relationships.
               </span>
               <span>
-                • Screen carriers to find quality, reliable, and consistent
-                drivers.
+                •	Market, service, and promote BBI Logistics transportation products and services.
               </span>
               <span>
-                • Handle all customer and carrier issues in a professional and
-                timely manner.
+              •	Establish strong relationships with clients, carriers, and internal team members.
               </span>
               <span>
-                • Maintain and update carrier database to company’s standard
-                operating procedures.
+              •	Effectively use systems and strategies for client prospecting and pipeline management.
               </span>
               <span>
-                • Analyze and negotiate rates based on current market price.
+              •	Ensure customer satisfaction and adequate service levels where freight is picked up and delivered using safe and reliable carriers.
               </span>
               <span>
-                • Handle a high volume of inbound phone calls from drivers and
-                carriers looking to book loads in a timely manner.
+              •	Manage and resolve daily carrier service issues, failures, and delays.
               </span>
               <span>
                 • Conduct outbound check calls to current drivers and carriers.
               </span>
               <span>
-                • Manage and resolve daily carrier service issues, failures, and
-                delays.
+              •	Present the value of BBI Logistics services to prospecting and existing clients.
               </span>
             </div>
             <div>
@@ -98,15 +81,18 @@ const AccountCord = () => {
               <br></br>
               <span>
                 {" "}
-                • Strong work ethic, self-motivation, and sales drive.
+                •	2+ years of sales or cold calling experience.
               </span>
               <br></br>
               <span>
                 {" "}
-                • Possess strong organizational and time management skills.
+                •	Strong work ethic, self-motivation, and sales drive.
               </span>
-              <span>• Customer Service or Sales experience preferred.</span>
+              <span>•	Possess strong organizational and time management skills.</span>
               <br></br>
+              <span>•	Must have flexibility in schedule to work after normal business hours and weekends.</span>
+              <span>•	Confident decision-making abilities.</span>
+              <span>•	Strong ability to sell and negotiate.</span>
               <span>• Bachelor’s degree preferred.</span>
             </div>
             <div>
@@ -201,8 +187,9 @@ const DetailsContainer = styled.div`
     text-align: left;
     z-index: 1;
     position: absolute;
-    top: 33%;
+    top: 55%;
     font-size: 50px;
+    text-shadow: 2px 2px 4px #000000;
 
     @media screen and (max-width: 500px) {
       top: 25%;
@@ -232,13 +219,15 @@ const DetailsContainer = styled.div`
 `
 
 const HImg = styled(Img)`
-  height: 35vh;
-  max-width: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
+  width: 100%;
+    height: auto;
+  max-height: 60vh;
   z-index: -100;
-  background: #314e7c;
-  position: absolute;
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  
 `
 
 const JobContainer = styled.div``

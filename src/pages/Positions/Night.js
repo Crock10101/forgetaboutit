@@ -9,8 +9,8 @@ import Footer from "../Footer.js"
 
 const AccountCord = () => {
   const data = useStaticQuery(graphql`
-    query recruiter {
-      bg: file(relativePath: { eq: "Recruiter.jpg" }) {
+    query nightd {
+      bg: file(relativePath: { eq: "IT.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 3080, quality: 100) {
             ...GatsbyImageSharpFluid_noBase64
@@ -20,6 +20,34 @@ const AccountCord = () => {
       people1: file(relativePath: { eq: "meet-bbi.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 3080, quality: 100) {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
+      }
+      pic1: file(relativePath: { eq: "pic1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 3080, quality: 100) {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
+      }
+      pic2: file(relativePath: { eq: "pic2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2500, quality: 100) {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
+      }
+      pic3: file(relativePath: { eq: "pic3.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2500, quality: 100) {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
+      }
+      pic4: file(relativePath: { eq: "pic4.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2500, quality: 100) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
@@ -35,14 +63,18 @@ const AccountCord = () => {
         <HImg fluid={data.bg.childImageSharp.fluid} alt="Logo" />
         <JobWrapper>
           <DetailsContainer>
-            <h1>Recruiter</h1>
+            <h1>Night Dispatch</h1>
 
             <br></br>
             <div>
               <h5>The position:</h5>
               <br></br>
               <p>
-              BBI Logistics is a fresh and rapidly growing company looking to add a full cycle Recruiter to our team. In this role, you will be responsible for driving the end to end hiring process from sourcing to hire. You will work in coordination with the HR team and business leaders throughout the hiring and selection process and serve as the key decision maker in building out our growing team. 
+                BBI Logistics offers transportation solutions including, but not
+                limited to truckload, intermodal, LTL, expedited, purchase order
+                consolidation, route optimization, cold storage, and disaster
+                response. As a part of our support team, you will act as the
+                lifeline between our sales team and transportation partners.
               </p>
             </div>
             <div>
@@ -51,31 +83,37 @@ const AccountCord = () => {
               <br></br>
               <span>
                 {" "}
-                •	Manage the full cycle recruitment process to include sourcing, screening, scheduling, ATS management, offer negotiation and onboarding.
+                • Handle a high volume of inbound and outbound phone calls,
+                ensuring pick up and deliveries are on schedule.
               </span>
               <span>
-              •	Screen candidate applications, conduct phone interviews, and arrange in person interviews.
+                • Build relationships with carriers and customers to understand
+                needs and ensure an excellent customer service experience.
               </span>
               <span>
-              •	Conduct one on one in-person interviews with potential candidates
+                • Responsible for the coordination, scheduling, and planning of
+                customer freight shipments.
               </span>
               <span>
-              •	Send offer letters and coordinate pre-employment paperwork.
+                • Analyze and negotiate rates with carriers based on current
+                market prices.
               </span>
               <span>
-              •	Work with our existing team to build processes and implement best practices for hiring top talent.
+                • Update Account Managers on any issues that arise throughout
+                and resolve issues in a timely and professional manner.
               </span>
               <span>
-              •	Market new job opportunities internally and collaborate with marketing team on how we can recruit quality candidates.
+                • Ensure all proper paperwork is received for billing.
               </span>
               <span>
-              •	Utilize search engines and databases to identify and qualify candidates for open positions.
+                • Work efficiently and effectively in a fast-paced environment.
               </span>
               <span>
-              •	Proactively establishes and maintains beneficial business relationships through networking.
+                • Document and manage all tasks in our internal systems.
               </span>
               <span>
-              •	Build and maintain effective, ongoing relationships with candidates and new employees.
+                • Respond to customers efficiently, thoroughly, and
+                professionally.
               </span>
             </div>
             <div>
@@ -84,17 +122,18 @@ const AccountCord = () => {
               <br></br>
               <span>
                 {" "}
-                •	1-3 years of business experience with a minimum of 1 in recruiting or staffing.
+                •	High School Diploma. Bachelor’s Degree preferred.
               </span>
               <br></br>
               <span>
                 {" "}
-                •	Familiarity with online sourcing / recruitment tools.
+                •	2+ years of relevant, customer service experience.
               </span>
-              <span>•	Excellent interpersonal and communication skills.</span>
+              <span>•	Self-motivated with a strong desire to meet customer needs.</span>
               <br></br>
-              <span>•	Ability to learn and apply modern technology and processes quickly.</span>
-              <span>•	Bachelor’s Degree required. </span>
+              <span>•	Desire for a long-term career with a fast-growing company.</span>
+              <span>•	Transportation industry knowledge and experience is a plus.</span>
+              <span>•	Must be able to work a flexible schedule, including weekends.</span>
             </div>
             <div>
               <br></br>
@@ -146,23 +185,24 @@ const AccountCord = () => {
               </ButtonContainer>
             </div>
           </DetailsContainer>
-          <PositionContainer>
+          
+        </JobWrapper>
+        <PositionContainer>
             <PositionWrapper>
               <CareerCard>
-                <CImg fluid={data.people1.childImageSharp.fluid} alt="Logo" />
+                <CImg fluid={data.pic2.childImageSharp.fluid} alt="Logo" />
               </CareerCard>
               <CareerCard>
-                <CImg fluid={data.people1.childImageSharp.fluid} alt="Logo" />
+                <CImg fluid={data.pic1.childImageSharp.fluid} alt="Logo" />
               </CareerCard>
               <CareerCard>
-                <CImg fluid={data.people1.childImageSharp.fluid} alt="Logo" />
+                <CImg fluid={data.pic3.childImageSharp.fluid} alt="Logo" />
               </CareerCard>
               <CareerCard>
-                <CImg fluid={data.people1.childImageSharp.fluid} alt="Logo" />
+                <CImg fluid={data.pic4.childImageSharp.fluid} alt="Logo" />
               </CareerCard>
             </PositionWrapper>
           </PositionContainer>
-        </JobWrapper>
       </JobContainer>
       <Footer />
     </Container>
@@ -189,9 +229,8 @@ const DetailsContainer = styled.div`
     z-index: 1;
     position: absolute;
     top: 55%;
-    font-size: 70px;
+    font-size: 50px;
     text-shadow: 2px 2px 4px #000000;
-
     @media screen and (max-width: 500px) {
       top: 25%;
     }
@@ -222,12 +261,11 @@ const DetailsContainer = styled.div`
 const HImg = styled(Img)`
   height: 60vh;
   max-width: 100%;
-  
   -o-object-fit: cover;
   object-fit: cover;
   z-index: -100;
   background: #314e7c;
- 
+  position: absolute;
 `
 
 const JobContainer = styled.div``
@@ -312,15 +350,20 @@ const CareerCard = styled.div`
 const CImg = styled(Img)`
   height: 100%;
   max-width: 100%;
+  
   position: relative;
   border-radius: 10px;
 `
 
 const PositionWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-gap: 10px;
   justify-items: center;
+  width: 50%;
+  
+  padding-right: 100px;
+  padding-left: 100px;
 
   @media screen and (max-width: 1200px) {
     grid-template-columns: 1fr 1fr;

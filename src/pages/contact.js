@@ -44,24 +44,24 @@ const contact = () => {
       <GlobalStyle />
       <Header />
       <ContactContainer>
-      <HeaderContainer>
-        <HeaderWrapper>
-          <h1>Let's Connect</h1>
-          <p>We'd love to hear from you</p>
-        </HeaderWrapper>
-      </HeaderContainer>
-      <FaqContainer>
-        <FaqWrapper>
-          <h3>Check out FAQ</h3>
-          <p>Find answers to the meaning of frieght and maybe even life</p>
-          <Button primary="true" round="true" css={"width: 180px"}>
-            View FAQ
-          </Button>
-        </FaqWrapper>
-      </FaqContainer>
-      <LostContainer>
+        <HeaderContainer>
+          <HeaderWrapper>
+            <h1>Let's Connect</h1>
+            <p>We'd love to hear from you</p>
+          </HeaderWrapper>
+        </HeaderContainer>
+        <FaqContainer>
+          <FaqWrapper>
+            <h3>Check out FAQ</h3>
+            <p>Find answers to the meaning of frieght and maybe even life</p>
+            <Button primary="true" round="true" css={"width: 180px"}>
+              View FAQ
+            </Button>
+          </FaqWrapper>
+        </FaqContainer>
+        <LostContainer>
           <ServicesContainer>
-          <h3 css={"padding: 2rem"}>Looking for something else?</h3>
+            <h3 css={"padding: 2rem"}>Looking for something else?</h3>
             <LostWrapper>
               {ServiceIcon.map((item, index) => {
                 return (
@@ -69,13 +69,19 @@ const contact = () => {
                     <Icon css={"color: black"}>{item.icon}</Icon>
                     <Title css={"color: black"}>{item.title}</Title>
                     <Description css={"color: gray"}>{item.desc}</Description>
-                    <Button primary="true" round="true" css={"width: 180px", "margin-bottom: 1rem"}>{item.btn}</Button>
+                    <Button
+                      primary="true"
+                      round="true"
+                      css={("width: 180px", "margin-bottom: 1rem")}
+                    >
+                      {item.btn}
+                    </Button>
                   </ServicesBox>
                 )
               })}
             </LostWrapper>
           </ServicesContainer>
-      </LostContainer>
+        </LostContainer>
       </ContactContainer>
       <Footer />
     </body>
@@ -115,7 +121,7 @@ const LostContainer = styled.div`
   justify-content: center;
 `
 const LostWrapper = styled.div`
-display: grid;
+  display: grid;
   justify-content: center;
   grid-template-columns: repeat(2, 1fr);
   overflow: hidden;
@@ -125,7 +131,8 @@ display: grid;
   }
   @media screen and (max-width: 500px) {
     grid-grid-template-columns: 1fr;
-  }`
+  }
+`
 
 const ServicesContainer = styled.div`
   width: 75%;
@@ -141,7 +148,7 @@ const ServicesContainer = styled.div`
 
 const ServicesBox = styled.div`
   height: 100%;
-  
+
   width: 100%;
   padding: 2rem;
   border-left: 1px solid;
@@ -161,19 +168,15 @@ const Title = styled.div`
   margin-bottom: 1rem;
 `
 const Description = styled.div`
-font-size: 1rem;
-margin-bottom: 2rem;`
-
-const ContactContainer = styled.div`
-
-h3 {
-  
-}
-
-p{
-  padding: 1rem;
-}
-
+  font-size: 1rem;
+  margin-bottom: 2rem;
 `
 
+const ContactContainer = styled.div`
+  h3 {
+  }
 
+  p {
+    padding: 1rem;
+  }
+`

@@ -10,7 +10,7 @@ import Footer from "../Footer.js"
 const AccountCord = () => {
   const data = useStaticQuery(graphql`
     query Bground {
-      bg: file(relativePath: { eq: "comb.png" }) {
+      bg: file(relativePath: { eq: "AccountCoordinator.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 3080, quality: 100) {
             ...GatsbyImageSharpFluid_noBase64
@@ -201,9 +201,9 @@ const DetailsContainer = styled.div`
     text-align: left;
     z-index: 1;
     position: absolute;
-    top: 33%;
+    top: 55%;
     font-size: 50px;
-
+    text-shadow: 2px 2px 4px #000000;
     @media screen and (max-width: 500px) {
       top: 25%;
     }
@@ -232,7 +232,7 @@ const DetailsContainer = styled.div`
 `
 
 const HImg = styled(Img)`
-  height: 35vh;
+  height: 60vh;
   max-width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
